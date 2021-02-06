@@ -1,0 +1,6 @@
+<ul class="skills">
+    <li *ngFor="let category of categoryList"
+        (click)="onClick(category)"
+        class="skill skill-{{category | lowercase}}"
+    >{{category}}</li>
+</ul>

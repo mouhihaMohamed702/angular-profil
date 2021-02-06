@@ -1,0 +1,16 @@
+
+<article class="portfolio">
+  <header>
+      <h3>Main Skills</h3>
+      <app-category-list (selectCategory)="onFilter($event)"></app-category-list>
+  </header>
+  <h3>Filter by: {{currentFilter}}</h3>
+  <div class="jobs">
+    <app-job
+      *ngFor="let job of jobList"
+      [job]="job"
+      [ngClass]="job"
+      (selectJob)="onDetail($event)"
+    ></app-job>
+  </div>
+</article>

@@ -1,0 +1,147 @@
+@import "fonts";
+@import "normalize";
+@import "colors";
+
+/* ----------------------- Content -----------------------------*/
+
+body {
+    background-color: #f5f5f5;
+    font-family: trebuchet MS, Arial;
+}
+
+a {
+    color: #fff;
+    background-color: $tag-color;
+    text-decoration: none;
+    padding: 0 0.2em;
+
+    &:visited {
+        text-decoration: none;
+        color: #fff;
+    }
+
+    &:hover {
+        text-decoration: none;
+        color: $tag-color;
+        background-color: #fff;
+    }
+}
+
+.container {
+    width: 100%;
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 0 1em;
+    box-sizing: border-box;
+}
+
+.skills,
+.social,
+.bio {
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+}
+
+/* ------------------- Header ------------------------- */
+
+h1,
+h2,
+h3 {
+    font-family: 'DukeFill';
+    color: $dark-gray;
+}
+
+h2 {
+    font-size: 3em;
+    text-shadow: 1px 2px lighten($dark-gray, 50%);
+}
+
+.top-site {
+    border-bottom: 3px solid $dark-gray;
+    padding: 30px 0;
+    text-align: center;
+
+    h1 {
+        font-size: 5em;
+        margin: 5px 0;
+    }
+
+    h2 {
+        color: $yellow;
+        text-shadow: 1px 1px $dark-gray;
+        margin: 0 0 10px 0;
+    }
+}
+
+.me {
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+    overflow: hidden;
+    margin: 0 auto;
+    border: 4px $dark-gray solid;
+}
+
+/* ----------------------------- social ------------------------- */
+
+.social-list {
+    margin: 0;
+    padding: 0;
+}
+
+.social-item {
+    list-style: none;
+    display: inline-block;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    font-size: 0;
+    background: lighten($dark-gray, 30%);
+    
+    img {
+        transform-origin: center;
+        transition: transform 0.2s ease-out;
+        transform: scale(1);
+    }
+    
+    &:hover img {
+        transform: scale(0.90);
+    }
+}
+
+/* ----------------------------- skills ------------------------- */
+
+.skill-list {
+    margin: 0;
+    padding: 0;
+}
+
+.skill {
+    list-style: none;
+    margin-bottom: 8px;
+    display: inline-block;
+    margin-right: 10px;
+    padding: 4px 6px;
+    color: #fff;
+    background-color: $tag-color;
+    font-size: 1.2em;
+
+    &:before {
+        content: "";
+        border-color: transparent $tag-color transparent transparent;
+        border-style: solid;
+        border-width: 6px;
+        float: left;
+        margin-left: -18px;
+        margin-top: 3px;
+    }
+
+    &:hover {
+        color: $tag-color;
+        background-color: #fff;
+        box-shadow: 2px 2px #ccc;
+
+        &:before {
+            border-color: transparent #FFF transparent transparent;
+        }
+    }
+}

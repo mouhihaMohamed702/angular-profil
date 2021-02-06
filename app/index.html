@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html ng-app="profile">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<meta property="og:title" content="Fellyph Cintra - Front-End Engineer"/>
+		<meta property="og:type" content="profile"/>
+		<meta property="og:description" content="I am currently working as a Front-end engineer at Elo7, where I develop an e-commerce of handmade products in Brasil and Argentina."/>
+		<meta property="og:url" content="http://www.fellyph.com.br/"/>
+		<meta property="og:site_name" content="Fellyph Cintra - Front-End Engineer"/>
+
+		<meta name="author" content="Fellyph Cintra"/>
+		<meta name="description" content="I am currently working as a Front-end engineer at Elo7, where I develop an e-commerce of handmade products in Brasil and Argentina."/>
+		<meta name="keywords" content="Front-End engineer, Developer, WordPress, HTML5, JavaScript, CSS3, AngularJS"/>
+
+        <!--build:css assets/css/style.min.css-->
+        <link rel="stylesheet" href="assets/css/style.min.css" />
+        <!--endbuild-->
+
+		<title>Fellyph Cintra - Front-End Engineer</title>
+	</head>
+
+	<body itemscope itemtype="https://schema.org/Person">
+		<section class="main container" ng-controller="ProfileController as profile">
+			<header class="top-site row">
+				<img class="me" src="assets/img/fellyph.jpg" width="200" height="200" title="Fellyph Cintra" itemprop="image" alt="Fellyph Cintra">
+				<h1 itemprop="name">FELLYPH CINTRA</h1>
+				<h2 itemprop="jobTitle">Front-end Engineer</h2>
+			</header>
+
+			<article class="bio row">
+				<header>
+					<h2>About</h2>
+				</header>
+				<div itemprop="description">
+                    <p>I have been working as a Web Developer since 2004. I am currently working as front-end engineer freelancer. I Moved to Dublin this year to look for an opportunity in Europe. My last work experience was at <a href="http://www.elo7.com.br" title="Elo7" alt="Elo7 company">Elo7</a>, a marketplace of handmade products based in Brazil, Argentina and Colombia. During this time, I was also a teacher at DRC training center, an IT school in São Paulo.</p>
+
+                    <p>My strongest skill is client-side front-end development. And My main domains are HTML, CSS, JavaScript, SASS, Compass and AngularJS. On server-side I usually code in Java and PHP. I also use GIT for version control, GruntJS to automate tasks and tests with Ruby(rSpec) and Jenkins. I hold a bachelor degree in Information Systems.</p>
+				</div>
+			</article>
+
+			<article class="social row">
+				<header>
+					<h2>Social</h2>
+				</header>
+				<ul class="social-list">
+					<li class="social-item" ng-repeat="social in profile.socials">
+						<a href="{{social.url}}" itemprop="url" title="{{social.titleUrl}}">
+							<img ng-src="{{social.assets}}" width="120" height="120" title="{{social.title}}" alt="{{social.alt}}">
+						</a>
+					</li>
+				</ul>
+			</article>
+
+			<section class="blog row">
+			    <header>
+			        <h2>Blog</h2>
+			    </header>
+			    <blog-article ng-repeat="post in profile.posts"></blog-article>
+			</section>
+
+			<article class="skills row" itemscope itemtype="http://schema.org/ItemList">
+				<header>
+					<h2>Skills</h2>
+				</header>
+
+				<ul class="skill-list">
+					<li class="skill" itemprop="itemListElement">WordPress</li>
+					<li class="skill" itemprop="itemListElement">JavaScript</li>
+					<li class="skill" itemprop="itemListElement">HTML5</li>
+					<li class="skill" itemprop="itemListElement">CSS3</li>
+					<li class="skill" itemprop="itemListElement">SASS</li>
+					<li class="skill" itemprop="itemListElement">Java</li>
+					<li class="skill" itemprop="itemListElement">AngularJS</li>
+					<li class="skill" itemprop="itemListElement">PHP</li>
+				</ul>
+			</article>
+
+            <article class="portfolio row">
+               <header>
+                   <h2>Portfolio</h2>
+               </header>
+                <portfolio-article ng-repeat="portfolio in profile.portfolios"></portfolio-article>
+
+                <a href="http://www.fellyph.com.br/blog/jobs">See more</a>
+            </article>
+            <!-- build:js assets/js/main.min.js -->
+            <script type="text/javascript" src="assets/components/angular/angular.min.js"></script>
+            <script type="text/javascript" src="assets/js/controllers/index.controller.js"></script>
+            <script type="text/javascript" src="assets/js/directives/blog-article.directive.js"></script>
+            <script type="text/javascript" src="assets/js/directives/portfolio-article.directives.js"></script>
+            <script type="text/javascript" src="assets/js/services/data.js"></script>
+            <!-- endbuild -->
+		</section>
+	</body>
+</html>

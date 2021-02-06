@@ -1,0 +1,45 @@
+@import '~assets/scss/_variable.scss';
+
+.job {
+  display: inline-block;
+  margin: 0 0 1.2em;
+  width: 100%;
+  break-inside: avoid-column;
+  background-color: #1a1a1a;
+
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .title {
+    font-weight: normal;
+    padding: 0.8rem 0.8rem 0.3rem 0.8rem;
+    margin-bottom: 0;
+  }
+
+  .description {
+    padding: 0 0.8rem;
+    font-size: 0.8em;
+  }
+
+  .fetures {
+    padding: 0 0.8em 0.8em 0.8em;
+    margin: 0;
+    list-style: none;
+    font-size: 0.8em;
+
+    li {
+      margin-bottom: 0.2em;
+    }
+
+    a {
+      background: $primary;
+      color: $secondary;
+      &:hover {
+        background: $secondary;
+        color: $primary;
+      }
+    }
+  }
+}
